@@ -2,8 +2,6 @@
 
 A high-speed **Layer 4 Load Balancer** built in C++ that efficiently distributes TCP traffic across multiple backend servers using a non-blocking, event-driven architecture.
 
-> 🚧 **Status: Active Development.** Currently building out core network routing.
-
 ---
 
 ## Tech Stack
@@ -47,24 +45,24 @@ The load balancer is designed around four core pillars:
 
 ### Phase 1 — TCP Foundation `🔨 In Progress`
 
-- [x] Project scaffolding (CMake, Docker, CI-ready structure)
-- [ ] TCP listener socket with `bind()` / `listen()` / `accept()`
-- [ ] Basic Round-Robin forwarding to a set of hardcoded backends
-- [ ] Bi-directional data relay between client ↔ backend
+- Project scaffolding (CMake, Docker, CI-ready structure)
+- TCP listener socket with `bind()` / `listen()` / `accept()`
+- Basic Round-Robin forwarding to a set of hardcoded backends
+- Bi-directional data relay between client ↔ backend
 
 ### Phase 2 — Non-Blocking I/O `📋 Planned`
 
-- [ ] Replace blocking sockets with non-blocking mode
-- [ ] Integrate Linux `epoll` for scalable event multiplexing
-- [ ] Implement edge-triggered notifications for high throughput
-- [ ] Graceful connection teardown and cleanup
+- Replace blocking sockets with non-blocking mode
+- Integrate Linux `epoll` for scalable event multiplexing
+- Implement edge-triggered notifications for high throughput
+- Graceful connection teardown and cleanup
 
 ### Phase 3 — Concurrency & Reliability `📋 Planned`
 
-- [ ] Worker thread pool with task queue
-- [ ] Active TCP health checks on a configurable interval
-- [ ] Automatic backend drain / re-addition on health state changes
-- [ ] Per-connection timeout enforcement
+- Worker thread pool with task queue
+- Active TCP health checks on a configurable interval
+- Automatic backend drain / re-addition on health state changes
+- Per-connection timeout enforcement
 
 ---
 
